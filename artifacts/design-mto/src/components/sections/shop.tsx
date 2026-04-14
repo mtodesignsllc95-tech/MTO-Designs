@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { ShoppingCart, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-import coasters from '@/assets/shop-coasters.png';
+import chaosControlLogo from '@assets/1775856165441_1776130301757.png';
+import sjopArtwork from '@assets/FB_IMG_1774509727181_1776130301749.jpg';
 import lamp from '@/assets/shop-lamp.png';
-import sign from '@/assets/shop-sign.png';
 
 const products = [
   {
@@ -12,7 +12,8 @@ const products = [
     name: 'Chaos & Control Heavyweight Tee',
     collection: 'Chaos & Control',
     price: '$45',
-    image: coasters,
+    image: chaosControlLogo,
+    imageFit: 'object-contain p-6 bg-black',
     status: 'In Stock',
     collectionColor: 'text-primary',
     badgeColor: 'border-primary/30 text-primary'
@@ -23,6 +24,7 @@ const products = [
     collection: 'Fuck Addiction',
     price: '$85',
     image: lamp,
+    imageFit: 'object-cover',
     status: 'Low Stock',
     collectionColor: 'text-secondary',
     badgeColor: 'border-secondary/30 text-secondary'
@@ -32,7 +34,8 @@ const products = [
     name: 'SJOP — Survivor Pullover',
     collection: 'Surviving Just on the Pain',
     price: '$75',
-    image: sign,
+    image: sjopArtwork,
+    imageFit: 'object-cover object-top',
     status: 'Made to Order',
     collectionColor: 'text-white/70',
     badgeColor: 'border-white/20 text-white/60'
@@ -65,7 +68,7 @@ export function ShopSection() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                  className={`w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100 ${product.imageFit}`}
                 />
                 <div className="absolute top-4 left-4">
                   <span className={`text-xs font-mono px-2 py-1 border ${product.badgeColor} bg-background/80 uppercase tracking-wider`}>
