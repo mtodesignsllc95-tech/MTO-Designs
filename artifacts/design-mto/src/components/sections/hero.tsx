@@ -42,9 +42,9 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Ideas built <br />
-            <span className="text-stroke text-transparent">with raw</span> <br />
-            precision.
+            Built from chaos, <br />
+            <span className="text-stroke text-transparent">designed with</span> <br />
+            purpose.
           </motion.h1>
 
           <motion.p 
