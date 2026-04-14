@@ -14,6 +14,7 @@ import { ServicesSection } from "@/components/sections/services";
 import { CustomBuildSection } from "@/components/sections/custom-build";
 import { EventsSection } from "@/components/sections/events";
 import { DifferentiatorsSection } from "@/components/sections/differentiators";
+import { DonationTrackerSection } from "@/components/sections/donation-tracker";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ function Home() {
         <HeroSection />
         <DifferentiatorsSection />
         <PortfolioSection />
+        <DonationTrackerSection />
         <ShopSection />
         <CustomBuildSection />
         <ServicesSection />
