@@ -10,17 +10,16 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-background/80 mix-blend-multiply z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background z-10" />
-        <motion.img 
+        <motion.img
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
-          src={heroBg} 
-          alt="Industrial Workshop" 
+          src={heroBg}
+          alt="Design MTO Workshop"
           className="w-full h-full object-cover opacity-60"
         />
       </div>
 
-      {/* Sparks / Dust Particles Effect (Simple CSS) */}
       <div className="absolute inset-0 z-0 pointer-events-none noise-bg opacity-30" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-20">
@@ -32,11 +31,11 @@ export function HeroSection() {
           >
             <div className="inline-flex items-center gap-3 mb-6 px-3 py-1 border border-primary/30 bg-primary/10 rounded-full">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-mono text-primary uppercase tracking-widest">Digital Forge Active</span>
+              <span className="text-xs font-mono text-primary uppercase tracking-widest">Design MTO Studio — Est. in Purpose</span>
             </div>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-white leading-[1.1] mb-8 uppercase"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,33 +46,43 @@ export function HeroSection() {
             purpose.
           </motion.h1>
 
-          <motion.p 
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 font-light"
+          <motion.p
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 font-light"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            We are a multicraft design and product studio. Apparel, wood, resin, vinyl, print, and custom art. Everything designed, built, and finished in-house.
+            A multicraft design and fabrication studio. Every piece is built in-house — apparel, wood, resin, vinyl, print, and custom art. And every collection carries a cause.
           </motion.p>
 
-          <motion.div 
+          <motion.div
+            className="flex flex-wrap gap-3 mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            <span className="text-xs font-mono px-3 py-1 border border-primary/40 text-primary uppercase tracking-widest">Chaos &amp; Control</span>
+            <span className="text-xs font-mono px-3 py-1 border border-secondary/40 text-secondary uppercase tracking-widest">Fuck Addiction</span>
+            <span className="text-xs font-mono px-3 py-1 border border-white/20 text-white/60 uppercase tracking-widest">Surviving Just on the Pain</span>
+          </motion.div>
+
+          <motion.div
             className="flex flex-wrap gap-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all rounded-none h-14 px-8 text-sm uppercase tracking-widest font-bold group">
-              Start a Build
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] transition-all rounded-none h-14 px-8 text-sm uppercase tracking-widest font-bold group" onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}>
+              See Collections
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-card rounded-none h-14 px-8 text-sm uppercase tracking-widest font-bold">
-              View Portfolio
+            <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-card rounded-none h-14 px-8 text-sm uppercase tracking-widest font-bold" onClick={() => document.getElementById('custom')?.scrollIntoView({ behavior: 'smooth' })}>
+              Custom Build
             </Button>
           </motion.div>
         </div>
       </div>
 
-      {/* Decorative Elements */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-1/2 bg-gradient-to-b from-transparent via-primary to-transparent opacity-50 hidden lg:block" />
       <div className="absolute bottom-10 left-12 animate-bounce hidden md:block">
         <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent" />
