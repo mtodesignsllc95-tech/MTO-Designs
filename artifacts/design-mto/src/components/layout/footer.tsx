@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import mtoLogo from '@assets/copilot_image_1775657026146~2_1776130162897.jpeg';
 
 export function Footer() {
   return (
@@ -8,10 +9,23 @@ export function Footer() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <h2 className="text-3xl font-display font-bold tracking-tighter text-white uppercase mb-4">
-              Design<span className="text-primary">_MTO</span>
-            </h2>
-            <p className="text-muted-foreground max-w-sm mb-4">
+            {/* Logo + Brand */}
+            <div className="flex items-center gap-4 mb-5">
+              <img
+                src={mtoLogo}
+                alt="MTO Logo"
+                className="h-14 w-14 object-cover rounded-sm ring-1 ring-primary/40"
+              />
+              <div>
+                <p className="text-xs font-mono text-primary uppercase tracking-[0.2em] mb-0.5">Mommy's Time Out</p>
+                <h2 className="text-xl font-display font-bold tracking-tight text-white uppercase">
+                  Designs <span className="text-primary">LLC</span>
+                </h2>
+                <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mt-0.5">Custom Design &amp; Fabrications</p>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground max-w-sm mb-4 text-sm leading-relaxed">
               A multicraft design and fabrication studio — and a platform for causes that matter. Every piece is built in-house. Every collection carries a purpose.
             </p>
             <div className="flex flex-wrap gap-2 mb-6">
@@ -34,7 +48,7 @@ export function Footer() {
 
           <div>
             <h4 className="font-mono text-sm uppercase tracking-widest text-white mb-6">Navigate</h4>
-            <ul className="space-y-3 text-muted-foreground">
+            <ul className="space-y-3 text-muted-foreground text-sm">
               <li><a href="#collections" className="hover:text-primary transition-colors">Collections</a></li>
               <li><a href="#shop" className="hover:text-primary transition-colors">Shop</a></li>
               <li><a href="#custom" className="hover:text-primary transition-colors">Custom Build</a></li>
@@ -49,7 +63,7 @@ export function Footer() {
               <li>build@designmto.com</li>
               <li className="mt-4 text-xs leading-relaxed text-muted-foreground/70">
                 If you or someone you know needs help:<br />
-                <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">SAMHSA Helpline: 1-800-662-4357</a><br />
+                <a href="https://www.samhsa.gov/find-help/national-helpline" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">SAMHSA: 1-800-662-4357</a><br />
                 <a href="https://www.thehotline.org" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">DV Hotline: 1-800-799-7233</a><br />
                 <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Crisis Line: 988</a>
               </li>
@@ -59,7 +73,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground font-mono uppercase tracking-wider">
-            &copy; {new Date().getFullYear()} Design_MTO Studio. Built with purpose.
+            &copy; {new Date().getFullYear()} Mommy's Time Out Designs LLC. Built with purpose.
           </p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />

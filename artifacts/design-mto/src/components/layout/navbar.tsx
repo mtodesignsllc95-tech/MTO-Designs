@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import mtoLogo from '@assets/copilot_image_1775657026146~2_1776130162897.jpeg';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,7 +18,7 @@ export function Navbar() {
 
   const links = [
     { name: 'Home', href: '#home' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Collections', href: '#collections' },
     { name: 'Shop', href: '#shop' },
     { name: 'Custom Build', href: '#custom' },
     { name: 'Services', href: '#services' },
@@ -35,17 +36,25 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/80 backdrop-blur-md border-b border-border py-4' : 'bg-transparent py-6'
+        scrolled ? 'bg-background/80 backdrop-blur-md border-b border-border py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a 
-          href="#home" 
+        <a
+          href="#home"
           onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}
-          className="text-2xl font-display font-bold tracking-tighter text-white uppercase relative group"
+          className="flex items-center gap-3 group"
+          data-testid="link-logo"
         >
-          Design<span className="text-primary">_MTO</span>
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
+          <img
+            src={mtoLogo}
+            alt="MTO Logo"
+            className="h-10 w-10 object-cover rounded-sm ring-1 ring-primary/30 group-hover:ring-primary transition-all duration-300"
+          />
+          <div className="flex flex-col leading-tight">
+            <span className="text-xs font-mono text-primary uppercase tracking-[0.2em]">Mommy's Time Out</span>
+            <span className="text-sm font-display font-bold text-white uppercase tracking-widest">Designs LLC</span>
+          </div>
         </a>
 
         {/* Desktop Nav */}
@@ -70,9 +79,10 @@ export function Navbar() {
         </nav>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden text-foreground p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          data-testid="button-mobile-menu"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

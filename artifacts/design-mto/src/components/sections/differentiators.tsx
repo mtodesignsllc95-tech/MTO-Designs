@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Target, Layers, PenTool, Award, MapPin } from 'lucide-react';
+import businessCard from '@assets/file_00000000f09c71fdb760c7c7f59e64a1_1776130158276.png';
 
 const pillars = [
   {
@@ -34,7 +35,7 @@ const pillars = [
     icon: <MapPin className="w-7 h-7" />,
     number: '05',
     title: 'Local Maker Story',
-    body: `We are not a warehouse. We are not a drop shipper. We are a local studio making real things for real people in the community we live in. Every piece is touched by human hands before it reaches yours. When you buy from Design MTO, you're supporting a maker — not a machine, not a multinational. That matters to us, and we think it matters to you too.`,
+    body: `We are not a warehouse. We are not a drop shipper. We are a local studio — Mommy's Time Out Designs LLC — making real things for real people in the community we live in. Every piece is touched by human hands before it reaches yours. When you buy from MTO, you're supporting a maker, not a machine.`,
     accent: 'primary'
   }
 ];
@@ -42,12 +43,11 @@ const pillars = [
 export function DifferentiatorsSection() {
   return (
     <section id="about" className="py-32 bg-background relative z-10 border-y border-border overflow-hidden">
-      {/* Top accent line */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       <div className="container mx-auto px-6 md:px-12">
         {/* Header */}
-        <div className="max-w-3xl mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -58,9 +58,29 @@ export function DifferentiatorsSection() {
             <h3 className="text-4xl md:text-6xl font-display font-black uppercase text-white leading-tight mb-6">
               What Makes <br /><span className="text-transparent text-stroke">Us Different.</span>
             </h3>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-xl">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               There are a lot of custom studios. There is only one that builds product around mental health, addiction, and domestic violence awareness — and makes it with their own hands.
             </p>
+          </motion.div>
+
+          {/* Owner card */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10 pointer-events-none rounded-sm" />
+            <img
+              src={businessCard}
+              alt="Brittnay Upchurch — Owner / Designer, Mommy's Time Out Designs LLC"
+              className="w-full object-cover rounded-sm border border-border shadow-2xl"
+            />
+            <div className="mt-4 flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-xs font-mono text-primary uppercase tracking-[0.2em]">Brittnay Upchurch — Owner / Designer</span>
+            </div>
           </motion.div>
         </div>
 
@@ -78,7 +98,7 @@ export function DifferentiatorsSection() {
               {/* Number + Icon */}
               <div className="flex md:flex-col items-center md:items-start gap-4 md:gap-3">
                 <span className="text-xs font-mono text-muted-foreground tracking-widest">{pillar.number}</span>
-                <div className={`text-${pillar.accent} group-hover:text-${pillar.accent} transition-colors`}>
+                <div className={`text-${pillar.accent} transition-colors`}>
                   {pillar.icon}
                 </div>
               </div>
@@ -101,7 +121,6 @@ export function DifferentiatorsSection() {
         </div>
       </div>
 
-      {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
     </section>
   );
