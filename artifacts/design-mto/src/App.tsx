@@ -13,6 +13,7 @@ import { ShopSection } from "@/components/sections/shop";
 import { ServicesSection } from "@/components/sections/services";
 import { CustomBuildSection } from "@/components/sections/custom-build";
 import { EventsSection } from "@/components/sections/events";
+import { DifferentiatorsSection } from "@/components/sections/differentiators";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <DifferentiatorsSection />
         <PortfolioSection />
         <ShopSection />
         <CustomBuildSection />
