@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { Heart, Flame, Shield } from 'lucide-react';
 import chaosControlLogo from '@assets/1775856165441_1776130301757.png';
 import sjopArtwork from '@assets/FB_IMG_1774509727181_1776130301749.jpg';
+import fuckAddictionLogo from '@assets/fuck-addiction-logo_1776130396978.jpg';
 
 const collections = [
   {
@@ -32,8 +33,8 @@ const collections = [
     badgeClass: 'border-secondary/30 text-secondary bg-secondary/10',
     hoverGlow: 'group-hover:shadow-[0_0_40px_rgba(245,158,11,0.08)]',
     cause: 'Addiction Recovery',
-    image: null,
-    imageBg: 'bg-card',
+    image: fuckAddictionLogo,
+    imageBg: 'bg-black',
     size: 'small'
   },
   {
@@ -84,9 +85,9 @@ export function PortfolioSection() {
                     src={col.image}
                     alt={col.title}
                     className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${
-                      col.id === 'chaos-control'
-                        ? 'object-contain p-8 opacity-90 group-hover:opacity-100'
-                        : 'object-cover object-center opacity-80 group-hover:opacity-100'
+                      col.id === 'sjop'
+                        ? 'object-cover object-center opacity-80 group-hover:opacity-100'
+                        : 'object-contain p-8 opacity-90 group-hover:opacity-100'
                     }`}
                   />
                   {/* Gradient fade into card body */}

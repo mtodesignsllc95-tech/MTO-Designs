@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 import chaosControlLogo from '@assets/1775856165441_1776130301757.png';
 import sjopArtwork from '@assets/FB_IMG_1774509727181_1776130301749.jpg';
-import lamp from '@/assets/shop-lamp.png';
+import fuckAddictionLogo from '@assets/fuck-addiction-logo_1776130396978.jpg';
 
 const products = [
   {
@@ -23,8 +23,8 @@ const products = [
     name: 'Fuck Addiction — Statement Hoodie',
     collection: 'Fuck Addiction',
     price: '$85',
-    image: lamp,
-    imageFit: 'object-cover',
+    image: fuckAddictionLogo,
+    imageFit: 'object-contain p-6 bg-black',
     status: 'Low Stock',
     collectionColor: 'text-secondary',
     badgeColor: 'border-secondary/30 text-secondary'
