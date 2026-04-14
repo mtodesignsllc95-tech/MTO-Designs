@@ -1,0 +1,56 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "ZUfPuivYaU0d8y5GugYiw"
+uri = "file://artifacts/design-mto/src/assets/hero-bg.png"
+type = "image"
+title = "Dark industrial workshop with cyan light"
+
+[[generated]]
+id = "JqcEBVrgS7vosSwi-8UxS"
+uri = "file://artifacts/design-mto/src/assets/portfolio-resin-table.png"
+type = "image"
+title = "Custom wood and resin table"
+
+[[generated]]
+id = "U3vrZ3AJJAbsVULgQGjCB"
+uri = "file://artifacts/design-mto/src/assets/portfolio-vinyl-toy.png"
+type = "image"
+title = "Custom vinyl art toy"
+
+[[generated]]
+id = "lvxmCuIiSgbNlernoE3n3"
+uri = "file://artifacts/design-mto/src/assets/portfolio-apparel.png"
+type = "image"
+title = "Custom embroidered heavy hoodie"
+
+[[generated]]
+id = "uEKmsOrGGQ2dOxERPnzmO"
+uri = "file://artifacts/design-mto/src/assets/shop-coasters.png"
+type = "image"
+title = "Modern wood and metal coaster set"
+
+[[generated]]
+id = "XqAHVEoC-7yRvMJkdxBnc"
+uri = "file://artifacts/design-mto/src/assets/shop-lamp.png"
+type = "image"
+title = "Industrial desk lamp"
+
+[[generated]]
+id = "nHdBeXRkowM0vmz_txrzl"
+uri = "file://artifacts/design-mto/src/assets/shop-sign.png"
+type = "image"
+title = "Custom engraved metal sign"
+
+[[generated]]
+id = "5siNy6ezyHSKRO3fwmoDn"
+uri = "file://artifacts/design-mto/src/assets/custom-build.png"
+type = "image"
+title = "Hands working on custom build"
+
+[[generated]]
+id = "r8VSKVL6o9Pjmy8BGSu1O"
+uri = "file://artifacts/design-mto/src/assets/event-bg.png"
+type = "image"
+title = "Dark industrial workshop event"

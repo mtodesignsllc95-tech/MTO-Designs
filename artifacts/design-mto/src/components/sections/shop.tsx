@@ -1,0 +1,64 @@
+import { motion } from 'framer-motion';
+import { ShoppingCart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+import coasters from '@/assets/shop-coasters.png';
+import lamp from '@/assets/shop-lamp.png';
+import sign from '@/assets/shop-sign.png';
+
+const products = [
+  { id: 1, name: 'Charred Ash Coaster Set', price: '$45', image: coasters, status: 'In Stock' },
+  { id: 2, name: 'Monolith Desk Lamp', price: '$120', image: lamp, status: 'Low Stock' },
+  { id: 3, name: 'Custom Metal Signage', price: 'From $150', image: sign, status: 'Made to Order' },
+];
+
+export function ShopSection() {
+  return (
+    <section id="shop" className="py-32 bg-background relative z-10 border-y border-border">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="text-center mb-20">
+          <h2 className="text-sm font-mono text-secondary uppercase tracking-[0.2em] mb-4">Arsenal</h2>
+          <h3 className="text-4xl md:text-5xl font-display font-bold uppercase text-white">Standard <span className="text-muted-foreground">Issue.</span></h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {products.map((product, idx) => (
+            <motion.div
+              key={product.id}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="group"
+            >
+              <div className="relative aspect-square bg-card border border-border mb-6 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur border border-border px-3 py-1 text-xs font-mono uppercase tracking-wider text-muted-foreground">
+                  {product.status}
+                </div>
+                
+                {/* Hover overlay CTA */}
+                <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                  <Button className="bg-white text-black hover:bg-secondary rounded-none font-bold uppercase tracking-wider">
+                    <ShoppingCart className="w-4 h-4 mr-2" /> Add to Cart
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="flex justify-between items-start">
+                <div>
+                  <h4 className="text-lg font-display font-bold text-white uppercase">{product.name}</h4>
+                </div>
+                <span className="text-secondary font-mono">{product.price}</span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
