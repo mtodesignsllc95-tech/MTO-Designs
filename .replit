@@ -121,3 +121,10 @@ externalPort = 3001
 
 [objectStorage]
 defaultBucketID = "replit-objstore-ce6cba0a-24c1-43b0-badb-740b6e668e9b"
+
+[userenv]
+
+[userenv.production]
+
+[userenv.shared]
+ssh-ed25519 = "AAAAC3NzaC1lZDI1NTE5AAAAIJ2Er+pSdG8ioMBYMtJsIz0Bfk0IZjXy2fLSFVb/etK1"
